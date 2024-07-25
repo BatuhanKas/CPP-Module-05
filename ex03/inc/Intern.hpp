@@ -6,7 +6,7 @@
 /*   By: bkas <bkas@student.42kocaeli.com.tr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/16 10:38:09 by bkas              #+#    #+#             */
-/*   Updated: 2024/07/25 16:15:24 by bkas             ###   ########.fr       */
+/*   Updated: 2024/07/25 16:33:26 by bkas             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,9 +33,11 @@ class AForm;
 
 class Intern {
    private:
+    /* **** [v] Pointer to Member Functions [v] **** */
     AForm *CreateShrubberyForm(string target);
     AForm *CreatePresidentialForm(string target);
     AForm *CreateRobotomyRequestForm(string target);
+    /* **** [^] Pointer to Member Functions [^] **** */
 
    public:
     /* ***** [v] Orthodox Form [v] ***** */
