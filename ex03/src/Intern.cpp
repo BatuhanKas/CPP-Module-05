@@ -6,7 +6,7 @@
 /*   By: bkas <bkas@student.42kocaeli.com.tr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/16 10:38:08 by bkas              #+#    #+#             */
-/*   Updated: 2024/07/25 16:13:07 by bkas             ###   ########.fr       */
+/*   Updated: 2024/07/25 16:32:01 by bkas             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,17 +78,17 @@ AForm *Intern::makeForm(string formName, string target) {
 
     switch (i) {
         case 0:
-            cout << LIGHT_YELLOW << "Intern Creates " << arr[i] << " form"
+            cout << LIGHT_YELLOW << "Intern Creates " << arr[0] << " form"
                  << endl;
-            return (this->*ptr[i])(target);
+            return (this->*ptr[0])(target);
         case 1:
-            cout << LIGHT_YELLOW << "Intern Creates " << arr[i] << " form"
+            cout << LIGHT_YELLOW << "Intern Creates " << arr[1] << " form"
                  << endl;
-            return (this->*ptr[i])(target);
+            return (this->*ptr[1])(target);
         case 2:
-            cout << LIGHT_YELLOW << "Intern Creates " << arr[i] << " form"
+            cout << LIGHT_YELLOW << "Intern Creates " << arr[2] << " form"
                  << endl;
-            return (this->*ptr[i])(target);
+            return (this->*ptr[2])(target);
         default:
             throw FalseFormName();
     }
