@@ -96,7 +96,6 @@ Tanimi asagidaki sekilde oldugu gibidir.
 |-----------------------------------------|
 
 - Exception nesnesinin hata mesajını döndürmek için kullanılır. Bu fonksiyon, istisnanın nedenini veya türünü açıklayan char* dizisi döner.
-<br>
 
 ####  **Proje Hakkinda** 
 Projede kendi olusturdugumuz hata siniflari orthodox canonical form'a uygun olmak zorunda degil haberiniz olsun. Zaten bunu pdf'tede belirtmis + main kisimda hata sinifindan obje olusturup islem yapamiyoruz. Cunku adi ustunde hata sinifi sadece hatalarda kullanacagiz.
