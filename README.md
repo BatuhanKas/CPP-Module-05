@@ -45,7 +45,7 @@ Daha iyi anlasilmasi icin asagiya bir ornek veriyorum;
 #include  <iostream> 
 using  namespace  std;
 
-void  x(int num) throw(runtime_error,  logic_error) {
+void  checknum(int num) throw(runtime_error,  logic_error) {
 	if (num ==  0) {
 		throw  runtime_error("num can't be zero");
 	}  else  if (num <  0) {
@@ -57,23 +57,22 @@ void  x(int num) throw(runtime_error,  logic_error) {
 
 int  main() {
 	try  {
-		x(-7);
-		x(10);
+		checknum(-7);
+		checknum(10);
 	}  catch (logic_error &le) {
 		cerr <<  "logic_error: "  <<  le.what() << endl;
 	}  catch (runtime_error &re) {
 		cerr <<  "runtime_error: "  <<  re.what() << endl;
 	}
-	
 	/*
 		Some other Codes...
 	*/
 }
 ```
 
-Yukaridaki ornekte x adinda bir fonksiyon yazdim. Bu fonksiyon belirli hata kontrolleri yapiyor ve herhangi bir kosul uyusmadigi zaman bir hata donduruyor. 
+Yukaridaki ornekte checknum adinda bir fonksiyon yazdim. Bu fonksiyon belirli hata kontrolleri yapiyor ve herhangi bir kosul uyusmadigi zaman bir hata donduruyor. 
 
-Try Catch bloğu hangi satırda hata fırlatırsa ornegin ilk basta x adli fonksiyona -7 degerini yolluyorum. -7 degeri bana logic_error donduruyor. Error dondugu icin catch blogu error'u yakalayip ekrana hata bastiriyor. Bu raddeden sonra try blogunun icerisinde olan kodun devami calismayacak. x fonksiyona -7 degerini yolladim ve hata elde ettim, devaminde 10 degerini yollamayacaktir. Ayriyetten catch blogunun altinda baska kodlar olsaydi, main fonksiyonun devami olsaydi, devami calismaya devam edecekti.
+Try Catch bloğu hangi satırda hata fırlatırsa ornegin ilk basta checknum adli fonksiyona -7 degerini yolluyorum. -7 degeri bana logic_error donduruyor. Error dondugu icin catch blogu error'u yakalayip ekrana hata bastiriyor. Bu raddeden sonra try blogunun icerisinde olan kodun devami calismayacak. checknum fonksiyona -7 degerini yolladim ve hata elde ettim, devaminde 10 degerini yollamayacaktir. Ayriyetten catch blogunun altinda baska kodlar olsaydi, main fonksiyonun devami olsaydi, devami calismaya devam edecekti.
 
 Yukarida ben gordugunuz uzere, fonksiyonun yanina throw() parantezi acip, icerisine firlatmak istedigim nesne turlerini belirttim. Eger throw() acip icerisine herhangi bir sey yazmasaydim, bir exception firlatmayacagimi soylemis olurdum. Ancak ben hata firlatip, throw() acip icini bos biraksaydim buyuk ihtimal abort yerdim. cunku exception firlatiyorum fakat yukarida parantez icerisinde belirtmiyorum. Bu kullanimin soyle sorun cikartan bir durumu var. Eger ben fonksiyonun yanina hic throw yazmasaydim, bu fonksiyon yine calisacakti.
 
